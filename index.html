@@ -877,10 +877,15 @@
         <div class="container">
             <h2 class="section-title text-center reveal">Workout Gallery</h2>
             
-            <!-- UPDATED VIDEO SECTION: AUTOPLAY, DIRECTLY LOADED, FILENAME DWV.MP4 -->
+            <!-- FIXED VIDEO SECTION -->
             <div class="video-container reveal" style="background: #000;">
-                <video width="100%" height="100%" controls autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                    <source src="DWV.MP4" type="video/mp4">
+                <!-- 
+                     1. Added 'controls' so a Play Button appears (fixes mobile black screen).
+                     2. Added 'poster="DW1.jpeg"' to show an image while loading.
+                     3. Added '?v=2' to src to force browser to ignore old cached errors.
+                -->
+                <video width="100%" height="100%" controls loop playsinline poster="DW1.jpeg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    <source src="DWV.mp4?v=2" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
             </div>
@@ -1011,7 +1016,7 @@
             </div>
             <!-- UPDATED COPYRIGHT TEXT -->
             <p style="font-weight: 600; letter-spacing: 1px;">&copy; 2023 Darwin Fitness. All rights reserved</p>
-            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Sponsored by Gajee's Hub</p>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 10px;">Sponsored by Ghub</p>
         </div>
     </footer>
 
